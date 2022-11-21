@@ -14,6 +14,12 @@ namespace PluginBase
 
     public class EventData
     {
-        public object Body { get; set; }
+        public EventBody Body { get; set; }
+    }
+
+    public class EventBody
+    {
+        [JsonPropertyName("correlationId")]
+        public string CorrelationId { get; set; } = "776C7C4C-5D6E-4B04-B404-DD4042C81199";
     }
 }

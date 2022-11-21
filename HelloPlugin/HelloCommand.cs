@@ -18,7 +18,7 @@ namespace HelloPlugin
         }
     }
 
-    public class EventBody_Custom
+    public class EventBody_Custom : EventBody
     {
         [JsonPropertyName("myCustomProperty")]
         public string SomeProp { get; set; } = "Test";

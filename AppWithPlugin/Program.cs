@@ -2,9 +2,11 @@
 using PluginBase;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Loader;
 using System.Text.Json.Serialization;
 
 namespace AppWithPlugin
@@ -46,6 +48,21 @@ namespace AppWithPlugin
                 }
                 else
                 {
+                    var testEvent = new TestEvent() { CorrelationId = "1-2-3-4" };
+                    var defaultContext = AssemblyLoadContext.GetLoadContext(testEvent.GetType().Assembly);
+                    Console.WriteLine("***");
+                    Console.WriteLine($"Checking property is deserialized correctly, TestEvent context '{defaultContext.ToString()}'");
+                    var testEventEvGrid = new EventGridEvent("Test", "Type", "1.0", testEvent);
+                    var testEventJson = testEventEvGrid.Data.ToString();
+                    if (testEventJson.Contains("correlationId") == false)
+                    {
+                        Console.WriteLine($"***unable to find \"correlationId\"***");
+                    }
+                    Console.WriteLine($"Actual testEventJson: {testEventJson}");
+                    PrintAssemblies(AssemblyLoadContext.Default.Assemblies.Where(x => x.FullName.Contains("Json")));
+                    Console.WriteLine("***");
+                    Console.WriteLine();
+
                     foreach (string commandName in args)
                     {
                         Console.WriteLine($"-- {commandName} --");
@@ -60,28 +77,20 @@ namespace AppWithPlugin
 
                         if (command._eventData != null)
                         {
-                            Console.WriteLine("Checking property is deserialized correctly, TestEvent is in DefaultContext");
-                            var testEvent = new EventGridEvent("Test", "Type", "1.0", new TestEvent() { CorrelationId = "1-2-3-4" });
-                            var testEventJson = testEvent.Data.ToString();
-                            if (testEventJson.Contains("correlationId") == false)
-                            {
-                                Console.WriteLine($"***unable to find \"correlationId\"***");
-
-                            }
-                            Console.WriteLine($"Actual testEventJson: {testEventJson}");
-
-                            Console.WriteLine();
-
-                            Console.WriteLine("check property is deserialized correctly, EventData is different context");
+                            Console.WriteLine("");
+                            Console.WriteLine("***");
+                            var pluginContext = AssemblyLoadContext.GetLoadContext(command.GetType().Assembly);
+                            Console.WriteLine($"Checking property is deserialized correctly, EventData context '{pluginContext.ToString()}'");
                             var eventDataBody = new EventGridEvent("Test", "Type", "1.0", command._eventData.Body);
                             var eventDataBodyJson = eventDataBody.Data.ToString();
-                            if (testEventJson.Contains("myCustomProperty") == false)
+                            if (eventDataBodyJson.Contains("myCustomProperty") == false)
                             {
-                                Console.WriteLine($"***unable to find \"myCustomProperty\"***");
+                                Console.WriteLine($"***unable to find \"myCustomProperty\", Json deserialized with property name instead***");
                             }
                             Console.WriteLine($"Actual EventData Json: {eventDataBodyJson}");
-
-
+                            PrintAssemblies(AssemblyLoadContext.GetLoadContext(command.GetType().Assembly).Assemblies);
+                            Console.WriteLine("***");
+                            Console.WriteLine();
                         }
 
                         Console.WriteLine();
@@ -94,6 +103,19 @@ namespace AppWithPlugin
             {
                 Console.WriteLine(ex);
             }
+        }
+
+        private static void PrintAssemblies(IEnumerable<Assembly> assemblies)
+        {
+            Console.WriteLine();
+            foreach (var assembly in assemblies)
+            {
+                FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+                string version = fileVersionInfo.ProductVersion;
+
+                Console.WriteLine($"   {assembly.GetName().FullName} - {version}");
+            }
+            Console.WriteLine();
         }
 
         static Assembly LoadPlugin(string relativePath)
