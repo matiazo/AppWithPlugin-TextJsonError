@@ -396,4 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-.vs/AppWithPlugin/v17/.suo
+
+#wwwroot files
+**/wwwroot/lib
+**/properties/ServiceDependencies
+
+.vs/
