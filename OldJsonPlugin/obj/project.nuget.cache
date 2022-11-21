@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/Hs+IMbhCvgolyI0q31RuaSEQwsBpJ0hVUp317SSlpRMeYmYoSdNIhfySpo8R+OvvWdwFEMVuazWfLX2reCSWQ==",
+  "success": true,
+  "projectFilePath": "C:\\repo\\dotnet-samples\\core\\extensions\\AppWithPlugin\\OldJsonPlugin\\OldJsonPlugin.csproj",
+  "expectedPackageFiles": [
+    "c:\\cs\\NugetPackages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

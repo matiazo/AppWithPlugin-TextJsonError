@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "50cNrEGJBZJv1u1/8dfbDOn2aqZzCywnA95tUDGtMEIifocQy7313p46BpgUmpeDCPwqxcS1Id+M5gLV6nMDNQ==",
+  "success": true,
+  "projectFilePath": "C:\\repo\\dotnet-samples\\core\\extensions\\AppWithPlugin\\HelloPlugin\\HelloPlugin.csproj",
+  "expectedPackageFiles": [
+    "c:\\cs\\NugetPackages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "c:\\cs\\NugetPackages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "c:\\cs\\NugetPackages\\system.text.json\\6.0.6\\system.text.json.6.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}

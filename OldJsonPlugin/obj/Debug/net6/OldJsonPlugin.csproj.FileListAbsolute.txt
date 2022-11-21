@@ -1,0 +1,16 @@
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\bin\Debug\net6\OldJsonPlugin.deps.json
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\bin\Debug\net6\OldJsonPlugin.runtimeconfig.json
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\bin\Debug\net6\OldJsonPlugin.dll
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\bin\Debug\net6\OldJsonPlugin.pdb
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\bin\Debug\net6\Newtonsoft.Json.dll
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\OldJsonPlugin.csproj.AssemblyReference.cache
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\OldJsonPlugin.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\OldJsonPlugin.AssemblyInfoInputs.cache
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\OldJsonPlugin.AssemblyInfo.cs
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\OldJsonPlugin.csproj.CoreCompileInputs.cache
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\OldJsonPlugin.csproj.CopyComplete
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\OldJsonPlugin.dll
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\refint\OldJsonPlugin.dll
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\OldJsonPlugin.pdb
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\OldJsonPlugin.genruntimeconfig.cache
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\OldJsonPlugin\obj\Debug\net6\ref\OldJsonPlugin.dll

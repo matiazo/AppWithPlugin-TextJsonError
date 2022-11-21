@@ -1,0 +1,12 @@
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\bin\Debug\net6\PluginBase.deps.json
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\bin\Debug\net6\PluginBase.dll
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\bin\Debug\net6\PluginBase.pdb
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\obj\Debug\net6\PluginBase.csproj.AssemblyReference.cache
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\obj\Debug\net6\PluginBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\obj\Debug\net6\PluginBase.AssemblyInfoInputs.cache
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\obj\Debug\net6\PluginBase.AssemblyInfo.cs
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\obj\Debug\net6\PluginBase.csproj.CoreCompileInputs.cache
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\obj\Debug\net6\PluginBase.dll
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\obj\Debug\net6\refint\PluginBase.dll
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\obj\Debug\net6\PluginBase.pdb
+C:\repo\dotnet-samples\core\extensions\AppWithPlugin\PluginBase\obj\Debug\net6\ref\PluginBase.dll
