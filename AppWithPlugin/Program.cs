@@ -60,13 +60,34 @@ namespace AppWithPlugin
 
                         if (command._eventData != null)
                         {
-                            var eventGridEvent = new EventGridEvent("Test", "Type", "1.0", command._eventData.Body);
+                            Console.WriteLine("Checking property is deserialized correctly, TestEvent is in DefaultContext");
+                            var testEvent = new EventGridEvent("Test", "Type", "1.0", new TestEvent() { CorrelationId = "1-2-3-4" });
+                            var testEventJson = testEvent.Data.ToString();
+                            if (testEventJson.Contains("correlationId") == false)
+                            {
+                                Console.WriteLine($"***unable to find \"correlationId\"***");
 
-                            var eventGridEvent1 = new EventGridEvent("Test", "Type", "1.0", new TestEvent() { CorrelationId = "1-2-3-4" });
+                            }
+                            Console.WriteLine($"Actual testEventJson: {testEventJson}");
+
+                            Console.WriteLine();
+
+                            Console.WriteLine("check property is deserialized correctly, EventData is different context");
+                            var eventDataBody = new EventGridEvent("Test", "Type", "1.0", command._eventData.Body);
+                            var eventDataBodyJson = eventDataBody.Data.ToString();
+                            if (testEventJson.Contains("myCustomProperty") == false)
+                            {
+                                Console.WriteLine($"***unable to find \"myCustomProperty\"***");
+                            }
+                            Console.WriteLine($"Actual EventData Json: {eventDataBodyJson}");
+
+
                         }
 
                         Console.WriteLine();
                     }
+
+                    Console.ReadLine();
                 }
             }
             catch (Exception ex)

@@ -20,7 +20,7 @@ namespace HelloPlugin
 
     public class EventBody_Custom
     {
-        [JsonPropertyName("MyProp")]
+        [JsonPropertyName("myCustomProperty")]
         public string SomeProp { get; set; } = "Test";
     }
 }
